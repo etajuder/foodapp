@@ -23,6 +23,20 @@ const ApplicationStyles = {
       paddingTop: Metrics.baseMargin,
       backgroundColor: Colors.transparent
     },
+
+    passwordText: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginRight: Metrics.doubleBaseMargin,
+      marginLeft: Metrics.doubleBaseMargin,
+      // marginTop: -20
+    },
+
+    text: {
+      color: Colors.snow,
+    },
+
     section: {
       margin: Metrics.section,
       padding: Metrics.baseMargin

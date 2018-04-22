@@ -1,29 +1,32 @@
 import { StyleSheet } from 'react-native'
-import { Metrics, ApplicationStyles } from '../../Themes/'
 
 export default StyleSheet.create({
-  ...ApplicationStyles.screen,
-  container: {
-    paddingBottom: Metrics.baseMargin
-  },
-  logo: {
-    marginTop: Metrics.doubleSection,
-    height: Metrics.images.logo,
-    width: Metrics.images.logo,
-    resizeMode: 'contain'
-  },
-  centered: {
-    alignItems: 'center'
+
+  modalView: {
+    backgroundColor: '#262526',
+    flex: 1,
+    justifyContent: 'center',
+
   },
 
-  loginImg: {
-    alignItems: 'center',
-    flex: 1.3
+  closeModal: {
+    marginBottom: 30,
+    marginRight: 30,
+    flexDirection: 'row-reverse',
+    paddingHorizontal: 10,
+    zIndex: 10
   },
 
-  inputSection: {
-    // padding: 25
+  resetText: {
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 25,
+    marginBottom: 15
   },
+
+  // inputSection: {
+  //   padding: 25
+  // },
 
   inputField: {
     height: 50,
