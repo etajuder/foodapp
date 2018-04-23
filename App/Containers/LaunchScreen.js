@@ -30,7 +30,7 @@ export default class LaunchScreen extends Component {
     return (
       <KeyboardAvoidingView behavior='padding' style={styles.mainContainer}>
         <View style={styles.loginImg}>
-          {/* <Image source={Images.launch} style={styles.logo} /> */}
+          <Image source={Images.launch} style={styles.logo} />
         </View>
           <View style={{flex: 1}}>
             <LoginForm />
