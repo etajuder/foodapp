@@ -4,41 +4,26 @@ import { Colors, Metrics } from '../../Themes/'
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.transparent,
+
+    backgroundColor: Colors.snow
   },
-  text: {
-    color: Colors.snow,
-    fontSize: 25,
-    textAlign: 'center',
-    marginTop: Metrics.baseMargin,
-    marginBottom: Metrics.baseMargin
+  wrapper: {
+    marginTop: Metrics.baseMargin * 1.3,
   },
-  img: {
-    height: 170,
-    backgroundColor: Colors.eggplant
-  },
-  hotDeals: {
-    backgroundColor: 'grey',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  takeaway: {
+    backgroundColor: 'black',
+    height: 50,
     marginLeft: Metrics.baseMargin,
     marginRight: Metrics.baseMargin,
-    paddingTop: Metrics.smallMargin,
-    paddingBottom: Metrics.smallMargin
   },
-  icon: {
-    marginRight: Metrics.baseMargin * 2,
-    fontSize: 25,
-    color: Colors.snow
-  },
-  hotText: {
+  takeawayText: {
     color: Colors.snow,
-    fontSize: 25,
-    marginLeft: Metrics.smallMargin
+    textAlign: 'center',
+    fontSize: 20,
+    padding: Metrics.baseMargin
   },
   cateBtn: {
-    backgroundColor: 'grey',
+    backgroundColor: Colors.fire,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -46,12 +31,11 @@ export default StyleSheet.create({
     paddingBottom: Metrics.smallMargin,
     position: 'absolute',
     bottom: 0,
-    opacity: 0.8,
     width: '100%',
   },
   categoryText: {
     color: Colors.snow,
-    fontSize: 25,
+    fontSize: 15,
     marginLeft: Metrics.smallMargin,
     zIndex: 999
   },

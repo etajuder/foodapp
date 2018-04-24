@@ -1,4 +1,7 @@
 import { StackNavigator } from 'react-navigation'
+import DealInfo from '../Containers/DealInfo'
+import HotDeals from '../Containers/HotDeals'
+import OrderList from '../Containers/OrderList'
 import OrderPage from '../Containers/OrderPage'
 import LaunchScreen from '../Containers/LaunchScreen'
 
@@ -6,6 +9,9 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  DealInfo: { screen: DealInfo },
+  HotDeals: { screen: HotDeals },
+  OrderList: { screen: OrderList },
   OrderPage: { screen: OrderPage },
   LaunchScreen: { screen: LaunchScreen }
 }, {

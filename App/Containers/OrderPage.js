@@ -17,13 +17,17 @@ class OrderPage extends Component {
     this.state = {
       categories: ['Sandwich', 'Burgers', 'Pizza', 'Salad','Sandwich', 'Burgers', 'Pizza', 'Salad']
     }
+
   }
 
+
+
   render () {
+    const { navigate } = this.props.navigation;
     const categories = this.state.categories.map((category) =>
       <View style={styles.categoryWrapper} key={shortid.generate()}>
         <ImageBackground source={Images.whopper} style={styles.categoryInner} >
-          <TouchableOpacity style={styles.cateBtn}>
+          <TouchableOpacity style={styles.cateBtn} onPress={() => navigate('OrderList', { name: 'seun'})}>
             <Text style={styles.categoryText}>{category}</Text>
             <FontAwesome name="angle-right" style={styles.icon}/>
           </TouchableOpacity>
@@ -34,7 +38,7 @@ class OrderPage extends Component {
       <ScrollView style={styles.container}>
         <Text style={styles.text}>START YOUR ORDER</Text>
         <View style={styles.img}></View>
-        <TouchableOpacity style={styles.hotDeals}>
+        <TouchableOpacity style={styles.hotDeals} onPress={() => navigate('HotDeals', { name: 'seun'})}>
           <Text style={styles.hotText}>Hot Deals</Text>
           <FontAwesome name="angle-right" style={styles.icon}/>
         </TouchableOpacity>
