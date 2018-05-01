@@ -5,6 +5,7 @@ const colors = {
   transparent: '#262526',
   silver: '#F7F7F7',
   steel: '#CCCCCC',
+  mud: '#999966',
   error: 'rgba(200, 0, 0, 0.8)',
   ricePaper: 'rgba(255,255,255, 0.75)',
   frost: '#D8D8D8',

@@ -37,7 +37,7 @@ class HotDeals extends Component {
     );
     return (
       <View style={styles.container}>
-        <Header routeAction={this.routeAction} headerText="HOT DEALS" icon="cart-plus" />
+        <Header routeAction={this.routeAction} headerText="HOT DEALS" icon="shopping-cart" />
         <ScrollView style={styles.wrapper}>
         <View style={styles.takeaway}>
           <Text style={styles.takeawayText}>DELIVERY AND TAKEAWAY ONLY</Text>

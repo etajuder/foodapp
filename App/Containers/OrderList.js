@@ -42,6 +42,7 @@ class OrderList extends Component {
     this.props.navigation.navigate(route, params);
   }
 
+
   render () {
     const categories = this.state.categories.map((category) =>
       <View style={styles.tabList}>
@@ -72,8 +73,8 @@ class OrderList extends Component {
             {categoriesList}
           </View>
         </ScrollView>
-        <TouchableOpacity style={styles.cart}>
-          <FontAwesome name="cart-plus" style={styles.cartIcon}/>
+        <TouchableOpacity style={styles.cart} onPress={() => this.props.navigation.navigate('MyCart')}>
+          <FontAwesome name="shopping-cart" style={styles.cartIcon}/>
         </TouchableOpacity>
       </View>
     )

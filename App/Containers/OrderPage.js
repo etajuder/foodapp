@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView, Text, ImageBackground, View, TouchableOpacity } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { connect } from 'react-redux'
+import Header from '../Components/Header'
 import shortid from 'shortid'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
@@ -20,8 +21,6 @@ class OrderPage extends Component {
 
   }
 
-
-
   render () {
     const { navigate } = this.props.navigation;
     const categories = this.state.categories.map((category) =>
@@ -35,17 +34,23 @@ class OrderPage extends Component {
       </View>
     );
     return (
-      <ScrollView style={styles.container}>
-        <Text style={styles.text}>START YOUR ORDER</Text>
-        <View style={styles.img}></View>
-        <TouchableOpacity style={styles.hotDeals} onPress={() => navigate('HotDeals', { name: 'seun'})}>
-          <Text style={styles.hotText}>Hot Deals</Text>
-          <FontAwesome name="angle-right" style={styles.icon}/>
-        </TouchableOpacity>
-        <View style={styles.category}>
-          {categories}
+      <View style={styles.container}>
+       <View style={styles.header}>
+          <FontAwesome name="bars" style={styles.barIcon} />
+          <Text style={styles.text}>START YOUR ORDER</Text>
+          <Text></Text>
         </View>
-      </ScrollView>
+        <ScrollView>
+          <View style={styles.img}></View>
+          <TouchableOpacity style={styles.hotDeals} onPress={() => navigate('HotDeals', { name: 'seun'})}>
+            <Text style={styles.hotText}>Hot Deals</Text>
+            <FontAwesome name="angle-right" style={styles.icon}/>
+          </TouchableOpacity>
+          <View style={styles.category}>
+            {categories}
+          </View>
+        </ScrollView>
+      </View>
     )
   }
 }

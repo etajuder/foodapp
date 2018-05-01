@@ -1,19 +1,20 @@
-import { StyleSheet } from 'react-native'
+import {Platform, StyleSheet } from 'react-native'
 import { Colors, Metrics } from '../../Themes'
 
 export default StyleSheet.create({
   container: {
-    // flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: Colors.transparent,
-    height: 70
+    height: 70,
+    marginTop: Platform.OS === 'ios' ? 30 : 0,
   },
   headerText: {
     color: Colors.snow,
     fontSize: 30,
     fontWeight: 'bold',
-    padding: Metrics.baseMargin
+    padding: Metrics.baseMargin,
+    marginTop: Metrics.smallMargin
   },
 
   icon: {

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import {Platform, StyleSheet } from 'react-native'
 import { Colors, Metrics } from '../../Themes/'
 
 export default StyleSheet.create({
@@ -6,6 +6,18 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.transparent,
   },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: Platform.OS === 'ios' ? 35 : 5,
+  },
+  barIcon: {
+    marginTop: Metrics.baseMargin * 1.5,
+    marginLeft: Metrics.baseMargin * 2,
+    fontSize: 25,
+    color: Colors.snow
+  },
+
   text: {
     color: Colors.snow,
     fontSize: 25,

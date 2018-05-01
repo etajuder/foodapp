@@ -1,4 +1,5 @@
 import { StackNavigator } from 'react-navigation'
+import MyCart from '../Containers/MyCart'
 import DealInfo from '../Containers/DealInfo'
 import HotDeals from '../Containers/HotDeals'
 import OrderList from '../Containers/OrderList'
@@ -9,6 +10,7 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  MyCart: { screen: MyCart },
   DealInfo: { screen: DealInfo },
   HotDeals: { screen: HotDeals },
   OrderList: { screen: OrderList },
